@@ -1,3 +1,5 @@
+![keystrokequest_logo](https://github.com/user-attachments/assets/ad5f22a8-8f1d-41bb-b2af-7719e784cb44)
+
 
 # KeystrokeQuest
 

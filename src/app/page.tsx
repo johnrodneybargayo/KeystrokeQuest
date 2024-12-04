@@ -160,17 +160,22 @@ const HomePage = () => {
         {TIME_OPTIONS.map((time) => (
           <button
             key={time}
-            className={`px-4 py-2 rounded-lg text-sm md:text-base ${
-              selectedTime === time
-                ? "bg-blue-500 text-white"
-                : "bg-gray-700 text-gray-300"
-            }`}
+            className={`px-4 py-2 rounded-lg text-sm md:text-base ${selectedTime === time
+              ? "bg-blue-500 text-white"
+              : "bg-gray-700 text-gray-300"
+              }`}
             onClick={() => handleTimeSelection(time)}
             disabled={isTestRunning}
           >
             {time / 60} min
           </button>
         ))}
+      </div>
+
+      <div className="mb-4">
+        <p className="text-xl font-bold">
+          Timer: {isTestRunning ? timeLeft : "Not Started"} seconds
+        </p>
       </div>
 
       <div
@@ -198,15 +203,14 @@ const HomePage = () => {
               return (
                 <span
                   key={charIndex}
-                  className={`${
-                    isCurrent
-                      ? "bg-yellow-300 text-black"
-                      : isCorrect
+                  className={`${isCurrent
+                    ? "bg-yellow-300 text-black"
+                    : isCorrect
                       ? "text-green-500"
                       : globalIndex < userInput.length
-                      ? "text-red-500"
-                      : "text-white"
-                  }`}
+                        ? "text-red-500"
+                        : "text-white"
+                    }`}
                 >
                   {char}
                 </span>
@@ -226,8 +230,18 @@ const HomePage = () => {
       ></textarea>
 
       <div className="flex gap-4">
-        <Button onClick={resetTest}>Reset</Button>
-        <Button onClick={fetchLeaderboard}>View Scoreboard</Button>
+        <Button
+          onClick={resetTest}
+          className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded"
+        >
+          Reset
+        </Button>
+        <Button
+          onClick={fetchLeaderboard}
+          className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded"
+        >
+          View Scoreboard
+        </Button>
       </div>
 
       {/* Results Modal */}

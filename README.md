@@ -115,6 +115,10 @@ Ensure you have the following installed:
 - Addressed rare edge cases causing incorrect WPM calculations.
 - Fixed leaderboard modal not opening on certain button clicks.
 
+### [1.0.6] **2024-12-04**
+- Added visual feedback for the running timer.
+- Customized Reset and View Scoreboard button colors.
+
 ---
 
 ## Planned Features
